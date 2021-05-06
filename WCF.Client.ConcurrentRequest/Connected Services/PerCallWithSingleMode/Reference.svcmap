@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8f336e62-fb89-442e-aa4b-a80cabcd837e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8711/WCF.Service.Concurrency/PerCallWithSingleMode/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="6a84da83-27a8-4629-b4c4-a61830441e61" SourceId="1" SourceUrl="http://localhost:8711/WCF.Service.Concurrency/PerCallWithSingleMode/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="083cc848-ad57-4318-9724-df38c807addc" SourceId="1" SourceUrl="http://localhost:8711/WCF.Service.Concurrency/PerCallWithSingleMode/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="65c04218-4ee4-49d5-b26c-0e1364fa6d4b" SourceId="1" SourceUrl="http://localhost:8711/WCF.Service.Concurrency/PerCallWithSingleMode/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

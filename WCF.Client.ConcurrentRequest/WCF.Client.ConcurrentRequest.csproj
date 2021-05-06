@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6293A525-90A5-40BA-95A4-504B81FA1BD3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>WCF.Client.ConcurrentRequest</RootNamespace>
+    <AssemblyName>WCF.Client.ConcurrentRequest</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\PerCallWithConcurrentMode\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PerCallWithReentrantMode\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PerCallWithSingleMode\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PerSessionWithConcurrentMode\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PerSessionWithReentrantMode\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PerSessionWithSingleMode\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SingleInstanceWithConcurrentMode\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SingleInstanceWithReentrantMode\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SingleInstanceWithSingleMode\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Connected Services\PerCallWithConcurrentMode\service.wsdl" />
+    <None Include="Connected Services\PerCallWithConcurrentMode\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PerCallWithConcurrentMode\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PerCallWithReentrantMode\service.wsdl" />
+    <None Include="Connected Services\PerCallWithReentrantMode\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PerCallWithReentrantMode\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PerCallWithSingleMode\service.wsdl" />
+    <None Include="Connected Services\PerCallWithSingleMode\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PerCallWithSingleMode\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PerSessionWithConcurrentMode\service.wsdl" />
+    <None Include="Connected Services\PerSessionWithConcurrentMode\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PerSessionWithConcurrentMode\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PerSessionWithReentrantMode\service.wsdl" />
+    <None Include="Connected Services\PerSessionWithReentrantMode\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PerSessionWithReentrantMode\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PerSessionWithSingleMode\service.wsdl" />
+    <None Include="Connected Services\PerSessionWithSingleMode\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PerSessionWithSingleMode\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SingleInstanceWithConcurrentMode\service.wsdl" />
+    <None Include="Connected Services\SingleInstanceWithConcurrentMode\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SingleInstanceWithConcurrentMode\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SingleInstanceWithReentrantMode\service.wsdl" />
+    <None Include="Connected Services\SingleInstanceWithReentrantMode\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SingleInstanceWithReentrantMode\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SingleInstanceWithSingleMode\service.wsdl" />
+    <None Include="Connected Services\SingleInstanceWithSingleMode\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SingleInstanceWithSingleMode\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\PerCallWithConcurrentMode\" />
+    <WCFMetadataStorage Include="Connected Services\PerCallWithReentrantMode\" />
+    <WCFMetadataStorage Include="Connected Services\PerCallWithSingleMode\" />
+    <WCFMetadataStorage Include="Connected Services\PerSessionWithConcurrentMode\" />
+    <WCFMetadataStorage Include="Connected Services\PerSessionWithReentrantMode\" />
+    <WCFMetadataStorage Include="Connected Services\PerSessionWithSingleMode\" />
+    <WCFMetadataStorage Include="Connected Services\SingleInstanceWithConcurrentMode\" />
+    <WCFMetadataStorage Include="Connected Services\SingleInstanceWithReentrantMode\" />
+    <WCFMetadataStorage Include="Connected Services\SingleInstanceWithSingleMode\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerCallWithConcurrentMode\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerCallWithConcurrentMode\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerCallWithConcurrentMode\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerCallWithReentrantMode\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerCallWithReentrantMode\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerCallWithReentrantMode\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerCallWithSingleMode\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerCallWithSingleMode\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerCallWithSingleMode\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerSessionWithConcurrentMode\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerSessionWithConcurrentMode\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerSessionWithConcurrentMode\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerSessionWithReentrantMode\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerSessionWithReentrantMode\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerSessionWithReentrantMode\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerSessionWithSingleMode\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerSessionWithSingleMode\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerSessionWithSingleMode\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SingleInstanceWithConcurrentMode\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SingleInstanceWithConcurrentMode\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SingleInstanceWithConcurrentMode\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SingleInstanceWithReentrantMode\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SingleInstanceWithReentrantMode\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SingleInstanceWithReentrantMode\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SingleInstanceWithSingleMode\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SingleInstanceWithSingleMode\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SingleInstanceWithSingleMode\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
